@@ -57,21 +57,21 @@ if(NOT generated_file)
 endif()
 
 # Set these up as variables to make reading the generated file easier
-set(CMAKE_COMMAND "/apps/software/CMake/3.12.1-GCCcore-7.3.0/bin/cmake") # path
-set(source_file "/scratch/s309876/individualProject/HeatEquation3D/src/heat3D.cu") # path
-set(NVCC_generated_dependency_file "/scratch/s309876/individualProject/HeatEquation3D/CMakeFiles/heat3D.dir//heat3D_generated_heat3D.cu.o.NVCC-depend") # path
-set(cmake_dependency_file "/scratch/s309876/individualProject/HeatEquation3D/CMakeFiles/heat3D.dir//heat3D_generated_heat3D.cu.o.depend") # path
-set(CUDA_make2cmake "/apps/software/CMake/3.12.1-GCCcore-7.3.0/share/cmake-3.12/Modules/FindCUDA/make2cmake.cmake") # path
-set(CUDA_parse_cubin "/apps/software/CMake/3.12.1-GCCcore-7.3.0/share/cmake-3.12/Modules/FindCUDA/parse_cubin.cmake") # path
+set(CMAKE_COMMAND "/apps/software/CMake/3.15.3-GCCcore-8.3.0/bin/cmake") # path
+set(source_file "/scratch/s309876/cudaAwareMpi/Cuda-aware-MPI-on-3D-heate-quation/HeatEquation3D/src/heat3D.cu") # path
+set(NVCC_generated_dependency_file "/scratch/s309876/cudaAwareMpi/Cuda-aware-MPI-on-3D-heate-quation/HeatEquation3D/CMakeFiles/heat3D.dir//heat3D_generated_heat3D.cu.o.NVCC-depend") # path
+set(cmake_dependency_file "/scratch/s309876/cudaAwareMpi/Cuda-aware-MPI-on-3D-heate-quation/HeatEquation3D/CMakeFiles/heat3D.dir//heat3D_generated_heat3D.cu.o.depend") # path
+set(CUDA_make2cmake "/apps/software/CMake/3.15.3-GCCcore-8.3.0/share/cmake-3.15/Modules/FindCUDA/make2cmake.cmake") # path
+set(CUDA_parse_cubin "/apps/software/CMake/3.15.3-GCCcore-8.3.0/share/cmake-3.15/Modules/FindCUDA/parse_cubin.cmake") # path
 set(build_cubin OFF) # bool
-set(CUDA_HOST_COMPILER "/apps/software/GCCcore/7.3.0/bin/cc") # path
+set(CUDA_HOST_COMPILER "/apps/software/GCCcore/8.3.0/bin/cc") # path
 # We won't actually use these variables for now, but we need to set this, in
 # order to force this file to be run again if it changes.
-set(generated_file_path "/scratch/s309876/individualProject/HeatEquation3D/CMakeFiles/heat3D.dir//.") # path
-set(generated_file_internal "/scratch/s309876/individualProject/HeatEquation3D/CMakeFiles/heat3D.dir//./heat3D_generated_heat3D.cu.o") # path
-set(generated_cubin_file_internal "/scratch/s309876/individualProject/HeatEquation3D/CMakeFiles/heat3D.dir//./heat3D_generated_heat3D.cu.o.cubin.txt") # path
+set(generated_file_path "/scratch/s309876/cudaAwareMpi/Cuda-aware-MPI-on-3D-heate-quation/HeatEquation3D/CMakeFiles/heat3D.dir//.") # path
+set(generated_file_internal "/scratch/s309876/cudaAwareMpi/Cuda-aware-MPI-on-3D-heate-quation/HeatEquation3D/CMakeFiles/heat3D.dir//./heat3D_generated_heat3D.cu.o") # path
+set(generated_cubin_file_internal "/scratch/s309876/cudaAwareMpi/Cuda-aware-MPI-on-3D-heate-quation/HeatEquation3D/CMakeFiles/heat3D.dir//./heat3D_generated_heat3D.cu.o.cubin.txt") # path
 
-set(CUDA_NVCC_EXECUTABLE "/apps/software/CUDA/9.2.88-GCC-7.3.0-2.30/bin/nvcc") # path
+set(CUDA_NVCC_EXECUTABLE "/apps/software/CUDA/10.1.243-GCC-8.3.0/bin/nvcc") # path
 set(CUDA_NVCC_FLAGS  ;; ) # list
 # Build specific configuration flags
 set(CUDA_NVCC_FLAGS_DEBUG  ; )
@@ -79,7 +79,7 @@ set(CUDA_NVCC_FLAGS_MINSIZEREL  ; )
 set(CUDA_NVCC_FLAGS_RELEASE  ; )
 set(CUDA_NVCC_FLAGS_RELWITHDEBINFO  ; )
 set(nvcc_flags -m64) # list
-set(CUDA_NVCC_INCLUDE_DIRS "/apps/software/CUDA/9.2.88-GCC-7.3.0-2.30/include;$<TARGET_PROPERTY:heat3D,INCLUDE_DIRECTORIES>") # list (needs to be in quotes to handle spaces properly).
+set(CUDA_NVCC_INCLUDE_DIRS "/apps/software/CUDA/10.1.243-GCC-8.3.0/include;$<TARGET_PROPERTY:heat3D,INCLUDE_DIRECTORIES>") # list (needs to be in quotes to handle spaces properly).
 set(CUDA_NVCC_COMPILE_DEFINITIONS [==[$<TARGET_PROPERTY:heat3D,COMPILE_DEFINITIONS>]==]) # list (needs to be in lua quotes see #16510 ).
 set(format_flag "-c") # string
 set(cuda_language_flag ) # list
@@ -187,7 +187,7 @@ cuda_execute_process(
 # For CUDA 2.3 and below, -G -M doesn't work, so remove the -G flag
 # for dependency generation and hope for the best.
 set(depends_CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS}")
-set(CUDA_VERSION 9.2)
+set(CUDA_VERSION 10.1)
 if(CUDA_VERSION VERSION_LESS "3.0")
   # Note that this will remove all occurrences of -G.
   list(REMOVE_ITEM depends_CUDA_NVCC_FLAGS "-G")

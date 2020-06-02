@@ -1,4 +1,4 @@
-# Install script for directory: /scratch/s309876/individualProject/HeatEquation3D/src
+# Install script for directory: /scratch/s309876/cudaAwareMpi/Cuda-aware-MPI-on-3D-heate-quation/HeatEquation3D/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/scratch/s309876/individualProject/HeatEquation3D/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/scratch/s309876/cudaAwareMpi/Cuda-aware-MPI-on-3D-heate-quation/HeatEquation3D/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
